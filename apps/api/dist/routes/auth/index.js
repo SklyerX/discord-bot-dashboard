@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const auth_1 = require("../../controllers/auth");
+const middlewares_1 = require("../../utils/middlewares");
+const router = (0, express_1.Router)();
+router.get("/discord/redirect", auth_1.authDiscordRedirectController);
+router.post("/signout", middlewares_1.isAuthenticated, auth_1.signUserOut);
+router.get("/user", auth_1.getAuthenticatedUser);
+exports.default = router;

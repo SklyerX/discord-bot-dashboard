@@ -1,4 +1,4 @@
-import { AUTH_ENDPOINT } from "@/utils/constants";
+import { API_ENDPOINT, AUTH_ENDPOINT } from "@/utils/constants";
 import { User } from "@/utils/types";
 import axios, { AxiosError } from "axios";
 import { redirect, useRouter } from "next/navigation";
@@ -18,10 +18,9 @@ export default function useSession({ redirectOnAuthFailure = true }: Props) {
     // call api and fetch user data
     const run = async () => {
       try {
-        const { data } = await axios.get<User>(
-          "http://localhost:8888/api/auth/user",
-          { withCredentials: true }
-        );
+        const { data } = await axios.get<User>(API_ENDPOINT, {
+          withCredentials: true,
+        });
         setUser(data);
       } catch (err) {
         if (err instanceof AxiosError) {
