@@ -30,9 +30,6 @@ export async function authDiscordRedirectController(
       const encryptedAccessToken = encrypt(access_token);
       const encryptedRefreshToken = encrypt(refresh_token);
 
-      info(access_token);
-      info(refresh_token);
-
       const newUser = await createUser({
         accessToken: encryptedAccessToken,
         refreshToken: encryptedRefreshToken,
