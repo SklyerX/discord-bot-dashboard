@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import getBans from "@/hooks/react-query/get-bans";
-import UnbanDropdown from "@/utils/UnbanDropdown";
+import UnbanDropdown from "@/components/UnbanDropdown";
 import { BannedUser } from "@/utils/types";
 import { ChevronLeft, Ghost, MoreVertical, Sliders } from "lucide-react";
 import Link from "next/link";

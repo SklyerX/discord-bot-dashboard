@@ -1,3 +1,11 @@
+# DEMO [ HOST : PENDING ]
+
+# Screenshots
+
+![Guilds](./screenshots/guilds.png "Guilds")
+![Settings](./screenshots/settings.png "App Settings")
+![Bans](./screenshots/bans.png "Banned Users")
+
 # Turborepo starter
 
 This is an official starter Turborepo.
