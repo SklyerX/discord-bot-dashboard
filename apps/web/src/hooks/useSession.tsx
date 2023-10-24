@@ -18,7 +18,7 @@ export default function useSession({ redirectOnAuthFailure = true }: Props) {
     // call api and fetch user data
     const run = async () => {
       try {
-        const { data } = await axios.get<User>(API_ENDPOINT, {
+        const { data } = await axios.get<User>(`${API_ENDPOINT}/auth/user`, {
           withCredentials: true,
         });
         setUser(data);
